@@ -1,21 +1,22 @@
 /* --- GLOBAL STYLES & FONT --- */
 body {
+    /* मूल गहरा काला रंग */
     font-family: 'Montserrat', sans-serif;
-    background-color: #0c0c0c; 
-    color: #f0f0f0; 
+    background-color: #0d0d0d; 
+    color: #e0e0e0; 
     margin: 0;
     padding: 0;
     line-height: 1.6;
 }
 
 a {
-    color: #f0f0f0;
+    color: #e0e0e0;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 a:hover {
-    color: #b8860b; /* Dark Goldenrod/Amber Accent */
+    color: #c0a060; /* गोल्ड/एम्बर जैसा उच्चारण रंग */
 }
 
 /* --- HEADER STYLES --- */
@@ -28,18 +29,75 @@ header {
     border-bottom: 1px solid #333;
 }
 
-/* ... (Logo, Nav, Icons styles from previous code remain the same) ... */
+.logo {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #c0a060; /* लोगो के लिए उच्चारण रंग */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    color: #e0e0e0;
+    font-size: 1.2em;
+    margin-left: 15px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+.icon-btn:hover {
+    color: #c0a060;
+}
 
 /* --- HERO SECTION --- */
 .hero {
-    background: url('images/hero-model.jpg') no-repeat center center/cover;
-    height: 70vh;
+    background: url('images/hero-model.jpg') no-repeat center center/cover; 
+    height: 60vh; /* Original height */
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: 0 80px;
+    padding: 0 50px;
 }
-/* ... (Hero Content, H1, P, Btn styles from previous code remain the same) ... */
+
+.hero-content {
+    color: #fff;
+    max-width: 500px;
+    background-color: rgba(0, 0, 0, 0.4); /* बेहतर पठनीयता के लिए */
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 25px;
+}
+
+.btn {
+    background-color: #c0a060;
+    color: #0d0d0d;
+    padding: 12px 30px;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: #d0b070;
+    color: #0d0d0d;
+}
 
 /* --- NEW ARRIVALS SECTION (Products) --- */
 .new-arrivals {
@@ -48,43 +106,72 @@ header {
 }
 
 .new-arrivals h2 {
-    font-size: 2.5em;
-    margin-bottom: 60px;
+    font-size: 2em;
+    margin-bottom: 40px;
     text-transform: uppercase;
-    font-weight: 700;
 }
 
 .product-grid {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 30px;
     flex-wrap: wrap; /* Added for responsiveness */
 }
 
 .product-item {
     background-color: #1a1a1a;
-    padding: 25px;
-    flex-basis: 30%; /* For desktop: 3 items per row */
+    padding: 20px;
+    flex-basis: 30%; 
     max-width: 350px;
     text-align: left;
-    transition: transform 0.3s, box-shadow 0.3s;
-    margin-bottom: 30px; /* Added spacing */
+    transition: transform 0.3s;
+    margin-bottom: 30px; 
 }
 
-/* ... (Product Item details styles from previous code remain the same) ... */
+.product-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.product-item h3 {
+    margin: 5px 0;
+    font-size: 1.1em;
+    font-weight: 700;
+}
+
+.price {
+    color: #c0a060;
+    font-weight: 700;
+    font-size: 1.2em;
+    margin: 5px 0 10px 0;
+}
+
+.description {
+    color: #a0a0a0; 
+    font-size: 0.9em;
+    margin-top: 5px;
+    min-height: 40px; 
+}
 
 .buy-btn {
     display: block; 
-    background-color: #0c0c0c; 
-    color: #b8860b; 
-    padding: 12px 0;
+    background-color: #0d0d0d; 
+    color: #c0a060; 
+    padding: 10px 0;
     text-align: center;
-    margin-top: 20px;
-    border: 1px solid #b8860b;
+    margin-top: 15px;
+    border: 1px solid #c0a060;
     text-transform: uppercase;
     font-weight: 700;
     transition: background-color 0.3s, color 0.3s;
-    font-size: 0.9em; /* Smaller text for long button */
+    font-size: 0.9em;
+}
+
+.buy-btn:hover {
+    background-color: #c0a060;
+    color: #0d0d0d;
 }
 
 /* --- FOOTER STYLES --- */
@@ -108,7 +195,7 @@ footer {
 }
 
 .footer-col h3 {
-    color: #f0f0f0;
+    color: #e0e0e0;
     font-size: 1.1em;
     margin-bottom: 20px;
     font-weight: 700;
@@ -120,16 +207,8 @@ footer {
     padding: 0;
 }
 
-.footer-col ul li {
-    margin-bottom: 10px;
-}
-
 .footer-col a {
     color: #777;
-}
-
-.footer-col a:hover {
-    color: #b8860b;
 }
 
 .social-icons .social-icon {
@@ -140,7 +219,7 @@ footer {
 }
 
 .social-icons .social-icon:hover {
-    color: #b8860b;
+    color: #c0a060;
 }
 
 .copyright {
@@ -158,9 +237,6 @@ footer {
 
 /* Tablet View (Screens up to 1024px) */
 @media (max-width: 1024px) {
-    .product-grid {
-        gap: 20px;
-    }
     .product-item {
         flex-basis: 45%; /* Two products per row */
     }
@@ -168,11 +244,8 @@ footer {
         height: 50vh;
         padding: 0 40px;
     }
-    .hero h1 {
-        font-size: 3em;
-    }
     .footer-container {
-        flex-wrap: wrap; /* Wrap columns on smaller screens */
+        flex-wrap: wrap;
         gap: 20px;
     }
     .footer-col {
@@ -186,23 +259,19 @@ footer {
         padding: 15px 20px;
     }
     nav {
-        display: none; /* Hide navigation links on mobile to save space */
+        display: none; /* Hide navigation links on mobile */
     }
     .hero {
         height: 40vh;
         padding: 0 20px;
-        align-items: flex-end; /* Move content to the bottom for better visibility */
+        align-items: flex-end; 
         padding-bottom: 30px;
     }
     .hero-content {
-        background-color: rgba(0, 0, 0, 0.7); /* Add dark overlay for readability */
+        background-color: rgba(0, 0, 0, 0.7); 
     }
     .hero h1 {
         font-size: 2em;
-    }
-    .hero p {
-        font-size: 0.9em;
-        margin-bottom: 15px;
     }
     .new-arrivals {
         padding: 40px 20px;
@@ -212,7 +281,7 @@ footer {
         gap: 20px;
     }
     .product-item {
-        flex-basis: 100%; /* Full width */
+        flex-basis: 100%; 
         max-width: 100%;
         padding: 15px;
     }
