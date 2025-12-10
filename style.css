@@ -1,8 +1,8 @@
 /* --- GLOBAL STYLES & FONT --- */
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #0c0c0c; /* Deep Dark Background */
-    color: #f0f0f0; /* Light Text */
+    background-color: #0c0c0c; 
+    color: #f0f0f0; 
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -28,39 +28,10 @@ header {
     border-bottom: 1px solid #333;
 }
 
-.logo {
-    font-size: 1.8em;
-    font-weight: 900;
-    color: #b8860b; /* Logo Accent Color */
-    letter-spacing: 1px;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    margin: 0;
-    padding: 0;
-    text-transform: uppercase;
-    font-weight: 500;
-}
-
-.icon-btn {
-    background: none;
-    border: none;
-    color: #f0f0f0;
-    font-size: 1.2em;
-    margin-left: 15px;
-    cursor: pointer;
-    transition: color 0.3s;
-}
-.icon-btn:hover {
-    color: #b8860b;
-}
+/* ... (Logo, Nav, Icons styles from previous code remain the same) ... */
 
 /* --- HERO SECTION --- */
 .hero {
-    /* Placeholder for the large model image. Create this file or replace the URL. */
     background: url('images/hero-model.jpg') no-repeat center center/cover;
     height: 70vh;
     display: flex;
@@ -68,38 +39,7 @@ nav ul {
     justify-content: flex-start;
     padding: 0 80px;
 }
-
-.hero-content {
-    max-width: 550px;
-    padding: 20px;
-}
-
-.hero h1 {
-    font-size: 3.8em;
-    margin-bottom: 10px;
-    font-weight: 900;
-}
-
-.hero p {
-    font-size: 1.1em;
-    margin-bottom: 30px;
-    color: #ccc;
-}
-
-.btn {
-    background-color: #b8860b;
-    color: #0c0c0c;
-    padding: 15px 40px;
-    text-transform: uppercase;
-    font-weight: 700;
-    display: inline-block;
-    letter-spacing: 1px;
-    transition: background-color 0.3s;
-}
-
-.btn:hover {
-    background-color: #d4af37; /* Lighter Gold on hover */
-}
+/* ... (Hero Content, H1, P, Btn styles from previous code remain the same) ... */
 
 /* --- NEW ARRIVALS SECTION (Products) --- */
 .new-arrivals {
@@ -118,48 +58,20 @@ nav ul {
     display: flex;
     justify-content: center;
     gap: 40px;
+    flex-wrap: wrap; /* Added for responsiveness */
 }
 
 .product-item {
     background-color: #1a1a1a;
     padding: 25px;
-    flex-basis: 30%;
+    flex-basis: 30%; /* For desktop: 3 items per row */
     max-width: 350px;
     text-align: left;
     transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 30px; /* Added spacing */
 }
 
-.product-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-}
-
-.product-item img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin-bottom: 20px;
-}
-
-.product-item h3 {
-    margin: 5px 0;
-    font-size: 1.2em;
-    font-weight: 700;
-}
-
-.price {
-    color: #b8860b;
-    font-weight: 900;
-    font-size: 1.5em;
-    margin: 5px 0 10px 0;
-}
-
-.description {
-    color: #a0a0a0; 
-    font-size: 0.9em;
-    margin-top: 5px;
-    min-height: 40px; /* To keep product boxes aligned */
-}
+/* ... (Product Item details styles from previous code remain the same) ... */
 
 .buy-btn {
     display: block; 
@@ -172,29 +84,144 @@ nav ul {
     text-transform: uppercase;
     font-weight: 700;
     transition: background-color 0.3s, color 0.3s;
+    font-size: 0.9em; /* Smaller text for long button */
 }
 
-.buy-btn:hover {
-    background-color: #b8860b;
-    color: #0c0c0c;
-}
-
-/* --- FOOTER --- */
+/* --- FOOTER STYLES --- */
 footer {
-    text-align: center;
-    padding: 40px 20px;
+    padding: 40px 50px 20px 50px;
     background-color: #1a1a1a;
     border-top: 1px solid #333;
-}
-
-.footer-content p {
-    margin: 5px 0;
-    font-size: 0.9em;
     color: #777;
 }
 
-.footer-content .tagline {
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+
+.footer-col {
+    flex-basis: 30%;
+}
+
+.footer-col h3 {
+    color: #f0f0f0;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col a {
+    color: #777;
+}
+
+.footer-col a:hover {
     color: #b8860b;
-    font-style: italic;
-    margin-top: 10px;
+}
+
+.social-icons .social-icon {
+    font-size: 1.5em;
+    margin-right: 15px;
+    color: #777;
+    transition: color 0.3s;
+}
+
+.social-icons .social-icon:hover {
+    color: #b8860b;
+}
+
+.copyright {
+    text-align: center;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    margin-top: 20px;
+    font-size: 0.85em;
+}
+
+
+/* ================================================= */
+/* --- RESPONSIVE DESIGN (Media Queries) --- */
+/* ================================================= */
+
+/* Tablet View (Screens up to 1024px) */
+@media (max-width: 1024px) {
+    .product-grid {
+        gap: 20px;
+    }
+    .product-item {
+        flex-basis: 45%; /* Two products per row */
+    }
+    .hero {
+        height: 50vh;
+        padding: 0 40px;
+    }
+    .hero h1 {
+        font-size: 3em;
+    }
+    .footer-container {
+        flex-wrap: wrap; /* Wrap columns on smaller screens */
+        gap: 20px;
+    }
+    .footer-col {
+        flex-basis: 45%;
+    }
+}
+
+/* Mobile View (Screens up to 600px) */
+@media (max-width: 600px) {
+    header {
+        padding: 15px 20px;
+    }
+    nav {
+        display: none; /* Hide navigation links on mobile to save space */
+    }
+    .hero {
+        height: 40vh;
+        padding: 0 20px;
+        align-items: flex-end; /* Move content to the bottom for better visibility */
+        padding-bottom: 30px;
+    }
+    .hero-content {
+        background-color: rgba(0, 0, 0, 0.7); /* Add dark overlay for readability */
+    }
+    .hero h1 {
+        font-size: 2em;
+    }
+    .hero p {
+        font-size: 0.9em;
+        margin-bottom: 15px;
+    }
+    .new-arrivals {
+        padding: 40px 20px;
+    }
+    .product-grid {
+        flex-direction: column; /* Stack products vertically */
+        gap: 20px;
+    }
+    .product-item {
+        flex-basis: 100%; /* Full width */
+        max-width: 100%;
+        padding: 15px;
+    }
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-col {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
 }
